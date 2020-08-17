@@ -12,6 +12,6 @@
 # you will see there no empty board,so create to create board you need to create superadmin, please run the command
 8. python manage.py createsuperuser
 9. Navigate http://127.0.0.1:8000/admin and login with admin that you have created recently and then create board.
-9. Navigate http://127.0.0.1:8000/admin you will see the some boards on UI.
+9. Navigate http://127.0.0.1:8000/ and you will see the some boards on UI.
 
 Thanks.
