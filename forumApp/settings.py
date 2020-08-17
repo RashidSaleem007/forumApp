@@ -11,10 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-from decouple import config, Csv
-import dj_database_url
-
-# from decouple import config
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -22,18 +18,12 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'l$3^%!)$u**d5s(9wqk)$9(4$4^1uxh4l7&1=+!@_^b#j9e^%g'
-# environment variables
-SECRET_KEY = config('SECRET_KEY')
-
-# # or local files
-# with open('/etc/secret_key.txt') as f:
-#     SECRET_KEY = f.read().strip()
+SECRET_KEY = 'l$3^%!)$u**d5s(9wqk)$9(4$4^1uxh4l7&1=+!@_^b#j9e^%g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = []
 
 # Application definition
 
