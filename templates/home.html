@@ -35,7 +35,7 @@
                                 <a href="{% url 'topic_posts' board.pk  post.pk %}">
                                     By {{ post.created_by.username }} at {{ post.created_at }}</a>
                             {% else %}
-                                <a>By Super Admin</a>
+                                <a>No Topic create yet.</a>
                             {% endif %}
 
                         </small>
