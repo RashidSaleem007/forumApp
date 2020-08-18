@@ -31,9 +31,13 @@
                 <td class="align-middle">
                     {% with post=board.get_last_post %}
                         <small>
-                            <a href="{% url 'topic_posts' board.pk post.topic.pk %}">
-                                By {{ post.created_by.username }} at {{ post.created_at }}
-                            </a>
+                            {% if post %}
+                                <a href="{% url 'topic_posts' board.pk  post.pk %}">
+                                    By {{ post.created_by.username }} at {{ post.created_at }}</a>
+                            {% else %}
+                                <a>By Super Admin</a>
+                            {% endif %}
+
                         </small>
                     {% endwith %}
                 </td>
